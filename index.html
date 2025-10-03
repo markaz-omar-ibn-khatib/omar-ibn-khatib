@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مركز عمر بن الخطاب</title>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     body {
       margin: 0;
@@ -14,107 +18,156 @@
       text-align: center;
     }
 
-    header {
-      background-color: #d0d0d0;
-      padding: 30px 10px;
+    /* القسم العلوي */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("banner.jpg") center/cover no-repeat; /* ← استبدل banner.jpg بصورتك */
+      color: #fff;
+      padding: 120px 20px;
     }
 
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
+    .hero h1 {
+      font-size: 40px;
+      color: #d4af37; /* ذهبي */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
 
-    header p {
-      font-size: 16px;
-      color: #333333;
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 10px auto 20px;
+      line-height: 1.7;
     }
 
+    .hero .btn {
+      display: inline-block;
+      background-color: #d4af37;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* أقسام عامة */
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       border-bottom: 1px solid #a0a0a0;
     }
 
     section h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
+      color: #d4af37;
+      font-size: 26px;
+      margin-bottom: 25px;
     }
 
     .card {
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
       margin: 10px auto;
-      padding: 15px;
+      padding: 20px;
       max-width: 400px;
-      border-radius: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #d4af37;
+      margin-bottom: 10px;
     }
 
     footer {
-      background-color: #d0d0d0;
-      padding: 20px;
+      background-color: #000;
+      color: #fff;
+      padding: 25px;
       font-size: 14px;
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #000;
-      color: #fff;
+    footer a {
+      color: #d4af37;
       text-decoration: none;
-      border-radius: 6px;
+      margin: 0 10px;
     }
 
-    .contact a:hover {
-      background-color: #444;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
+  <!-- القسم العلوي -->
+  <div class="hero">
+    <img src="logo.png" alt="شعار المركز" style="width:120px; margin-bottom:15px;"> <!-- ← ضع شعارك هنا -->
     <h1>مركز عمر بن الخطاب</h1>
     <p>مركز مخصص لدروس القرآن والعقيدة الإسلامية لأهل السنة والجماعة في سوريا وتركيا</p>
-  </header>
+    <a href="#lessons" class="btn">ابدأ التعلم</a>
+    <a href="#contact" class="btn">تواصل معنا</a>
+  </div>
 
+  <!-- عن المركز -->
   <section id="about">
-    <h2>عن المركز</h2>
-    <p>يهدف المركز إلى نشر العلم الشرعي الصحيح المستمد من الكتاب والسنة بفهم السلف الصالح، 
-      وتقديم دروس تربوية وعلمية في القرآن الكريم والعقيدة الإسلامية.</p>
+    <h2><i class="fas fa-mosque"></i> عن المركز</h2>
+    <p>نسعى لتعليم كتاب الله وسنة نبيه صلى الله عليه وسلم على منهج أهل السنة والجماعة، ونشر العلم الشرعي الصحيح في المجتمع.</p>
   </section>
 
+  <!-- دروس القرآن -->
   <section id="lessons">
-    <h2>دروس القرآن الكريم</h2>
+    <h2><i class="fas fa-book-open"></i> دروس القرآن الكريم</h2>
     <div class="card">
+      <i class="fas fa-quran"></i>
       <h3>تحفيظ وتجويد</h3>
       <p>دروس مخصصة لتعليم تلاوة القرآن الكريم وتحسين النطق والأداء وفق أحكام التجويد.</p>
     </div>
     <div class="card">
+      <i class="fas fa-lightbulb"></i>
       <h3>تفسير القرآن</h3>
       <p>شرح وتوضيح معاني آيات القرآن بأسلوب سهل وواضح يناسب مختلف الأعمار.</p>
     </div>
   </section>
 
+  <!-- دروس العقيدة -->
   <section id="aqeedah">
-    <h2>دروس العقيدة</h2>
+    <h2><i class="fas fa-star-and-crescent"></i> دروس العقيدة</h2>
     <div class="card">
+      <i class="fas fa-hand-holding-heart"></i>
       <h3>العقيدة الصحيحة</h3>
       <p>توضيح منهج أهل السنة والجماعة في التوحيد والإيمان بأسماء الله وصفاته.</p>
     </div>
     <div class="card">
+      <i class="fas fa-shield-alt"></i>
       <h3>الرد على الشبهات</h3>
       <p>تصحيح المفاهيم المغلوطة والرد على الشبهات المنتشرة حول العقيدة الإسلامية.</p>
     </div>
   </section>
 
+  <!-- تواصل معنا -->
   <section id="contact">
-    <h2>تواصل معنا</h2>
-    <div class="contact">
-      <a href="https://www.facebook.com/share/1GFMF7wcNi/" target="_blank">📘 فيسبوك</a>
-      <a href="https://wa.me/963930129294" target="_blank">💬 واتساب</a>
-    </div>
+    <h2><i class="fas fa-phone"></i> تواصل معنا</h2>
+    <a href="https://www.facebook.com/share/1GFMF7wcNi/" class="btn" target="_blank"><i class="fab fa-facebook"></i> فيسبوك</a>
+    <a href="https://wa.me/963930129294" class="btn" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
   </section>
 
+  <!-- التذييل -->
   <footer>
     <p>© 2025 مركز عمر بن الخطاب - جميع الحقوق محفوظة</p>
+    <div>
+      <a href="https://www.facebook.com/share/1GFMF7wcNi/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/963930129294" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
   </footer>
 
 </body>
